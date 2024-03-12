@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    <title>Person portfololio website</title>
+    <link rel="stylesheet" href="css.css">
+ 
+
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!--img src="images/Screenshot 2024-03-07 112357.png" class="logo"-->
+
+                <ul>
+                    <li><a href="#">Home</a> </li>
+                    <li><a href="#">About</a> </li>
+                    <li><a href="#">Services</a> </li>
+                    <li><a href="#">Portfolio</a> </li>
+                    <li><a href="#">Contact</a> </li>
+
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Civil Engineer</p>
+                <h1>Hi, I am <span>Viyath</span><br>from Sri Lanka</h1>
+            </div>
+        </div>
+    </div>
+    <!-- about----------------------------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/IMG_20221219_214404.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>I am a Bachelor of Science in Engineering in
+                        the field of Civil and Infrastructure
+                        Engineering. I Graduated from School of
+                        Engineering and Technology of Asian
+                        Institute of Technolgy, Thailand. I am
+                        capable of working under pressure as a
+                        genuine team member as well as on my
+                        own initiative.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Designing Web Applications</li>
+                            <li><span>App Development</span><br>Designing JAVA applciation</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024-Curent</span><br>Designing Web/App interfaces</li>
+                            <li><span>2023-2017</span><br>Different career</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2017-2013</span><br>Asian Institute of Technology, Thailand</li>
+                            <li><span>2013-1999</span><br>Dharmaraja Collage, Kandy</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- --------services----------------------->
+    <div id="Services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                   
+                    <h2>Web Design</h2>
+                    <p>
+                        designing web pages
+                    </p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                   
+                    <h2>UI/UX Design</h2>
+                    <p>
+                        designing UI and UX
+                    </p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    
+                    <h2>App Design</h2>
+                    <p>
+                        desiging java applications
+                    </p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+
+</html>
