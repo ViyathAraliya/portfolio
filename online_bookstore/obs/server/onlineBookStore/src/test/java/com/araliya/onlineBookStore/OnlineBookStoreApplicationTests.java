@@ -1,10 +1,10 @@
-package com.online_bookstore.helloSpring;
+package com.araliya.onlineBookStore;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OnlineBookstoreServerApplicationTests {
+class OnlineBookStoreApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,13 +1,13 @@
-package com.online_bookstore.helloSpring;
+package com.araliya.onlineBookStore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OnlineBookstoreServerApplication {
+public class OnlineBookStoreApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OnlineBookstoreServerApplication.class, args);
+		SpringApplication.run(OnlineBookStoreApplication.class, args);
 	}
 
 }
