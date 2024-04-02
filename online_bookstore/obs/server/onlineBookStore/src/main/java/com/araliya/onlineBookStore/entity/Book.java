@@ -1,10 +1,14 @@
 package com.araliya.onlineBookStore.entity;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Transient;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -36,4 +40,8 @@ public class Book {
     
     @Column(name="qty")
     private Integer qty;
+
+    @Transient
+    @OneToMany(mappedBy = "orderDetail",targetEntity = OrderDetail.class)
+    private List<OrderDetail> orderDetails;
 }

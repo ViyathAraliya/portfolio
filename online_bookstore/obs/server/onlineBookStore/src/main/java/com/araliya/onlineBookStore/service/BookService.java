@@ -2,6 +2,7 @@ package com.araliya.onlineBookStore.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.jaxb.SpringDataJaxb.OrderDto;
 import org.springframework.stereotype.Service;
 
 import com.araliya.onlineBookStore.entity.Book;
@@ -10,4 +11,5 @@ import com.araliya.onlineBookStore.entity.Book;
 public interface BookService {
     Book saveBook(Book book);
     List<Book> loadBooks();
+   
 }

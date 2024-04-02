@@ -1,4 +1,4 @@
-import react,{ useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -6,7 +6,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 function Home() {
     const [books, setBooks] = useState([]);
-
+   const [cart,setCart]=useState([]);
+   const[ha,setHa]=useState("");
+   
+   
+   
     useEffect(() => {
         
         axios.get("http://localhost:8080/loadBooks")
@@ -49,20 +53,27 @@ function Home() {
                                 <td>{book.author}</td>
                                 <td>{book.price}</td>
                                 <td><button className="btn btn-primary"
-                                onClick={(event)=>{
-                                    event.preventDefault();
-                                    console.log(77777);
+                                onClick={()=>{
+                                    
+                                    let cartImg=cart;
+                                    
+                                    cartImg.push({
+                                       book
+                                    });
+                                    let cartImg2=[...cartImg]
+                                   setCart(cartImg2);
                                 }}>add to cart</button></td>
                             </tr>
                         ))}
                         </tbody>
                        </table>
-       
+            </div>
+            
+            <div>
                 
+                <label> total items : {cart.length} </label>
             </div>
-            <div className="text-muted">
-                <p >"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            </div>
+            
         </div>
 
     </>
